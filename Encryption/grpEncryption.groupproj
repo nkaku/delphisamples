@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A9F1540B-242C-40ED-8CEB-88785392EF05}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="prjDMVC.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="prjEncrypt.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="prjDMVC">
+        <MSBuild Projects="prjDMVC.dproj"/>
+    </Target>
+    <Target Name="prjDMVC:Clean">
+        <MSBuild Projects="prjDMVC.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjDMVC:Make">
+        <MSBuild Projects="prjDMVC.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="prjEncrypt">
+        <MSBuild Projects="prjEncrypt.dproj"/>
+    </Target>
+    <Target Name="prjEncrypt:Clean">
+        <MSBuild Projects="prjEncrypt.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjEncrypt:Make">
+        <MSBuild Projects="prjEncrypt.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="prjDMVC;prjEncrypt"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="prjDMVC:Clean;prjEncrypt:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="prjDMVC:Make;prjEncrypt:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

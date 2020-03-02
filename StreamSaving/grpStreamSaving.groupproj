@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A9F1540B-242C-40ED-8CEB-88785392EF05}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="prjDMVC.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="prjStreamsTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="F:\Development\delphimvcframework\samples\fileupload\FilesUploadDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="prjDMVC">
+        <MSBuild Projects="prjDMVC.dproj"/>
+    </Target>
+    <Target Name="prjDMVC:Clean">
+        <MSBuild Projects="prjDMVC.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjDMVC:Make">
+        <MSBuild Projects="prjDMVC.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="prjStreamsTest">
+        <MSBuild Projects="prjStreamsTest.dproj"/>
+    </Target>
+    <Target Name="prjStreamsTest:Clean">
+        <MSBuild Projects="prjStreamsTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjStreamsTest:Make">
+        <MSBuild Projects="prjStreamsTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FilesUploadDemo">
+        <MSBuild Projects="F:\Development\delphimvcframework\samples\fileupload\FilesUploadDemo.dproj"/>
+    </Target>
+    <Target Name="FilesUploadDemo:Clean">
+        <MSBuild Projects="F:\Development\delphimvcframework\samples\fileupload\FilesUploadDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FilesUploadDemo:Make">
+        <MSBuild Projects="F:\Development\delphimvcframework\samples\fileupload\FilesUploadDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="prjDMVC;prjStreamsTest;FilesUploadDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="prjDMVC:Clean;prjStreamsTest:Clean;FilesUploadDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="prjDMVC:Make;prjStreamsTest:Make;FilesUploadDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

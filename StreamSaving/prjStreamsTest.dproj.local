@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.417,=C:\Users\Nirav\Documents\Embarcadero\Studio\Projects\Unit25.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.258,F:\Work\VIMOVYAA\PeterWilliams\Test\StreamSaving\MainF.pas=C:\Users\Nirav\Documents\Embarcadero\Studio\Projects\Unit25.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.946,F:\Work\VIMOVYAA\PeterWilliams\Test\StreamSaving\prjStreamsTest.dproj=C:\Users\Nirav\Documents\Embarcadero\Studio\Projects\Project21.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.258,F:\Work\VIMOVYAA\PeterWilliams\Test\StreamSaving\MainF.fmx=C:\Users\Nirav\Documents\Embarcadero\Studio\Projects\Unit25.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android=""/>
+		<PHighSierra1013 iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>
